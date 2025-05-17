@@ -60,7 +60,7 @@ parse_git_branch() {
 }
 
 if [ "$color_prompt" = yes ]; then
-	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\$ '
+	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[\033[01;31m\]$(parse_git_branch)\[\033[00m\]🐧 '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -94,6 +94,7 @@ alias ssh='TERM=xterm-256color ssh'
 alias ll='ls -l --color=auto'
 alias py=python3
 alias grep='grep --color=auto'
+alias fuzzy_pid="ps aux | fzf -e | tr -s ' ' | cut -d ' ' -f2"
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
