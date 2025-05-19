@@ -107,3 +107,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
+source /usr/share/doc/fzf/examples/key-bindings.bash
